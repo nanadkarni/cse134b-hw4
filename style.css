@@ -147,9 +147,20 @@ form-field{
 	}
 }
 
-
-
 textarea{
 	width: 40ch;
+}
+
+input:required{
+	background-color: var(--paleblue);
+}
+
+input:invalid {
+  border: 1px dashed var(--darkpeach);
+  background-color: var(--palepink);
+}
+
+input:valid {
+  border: 1px solid var(--offblack);
 }
 
