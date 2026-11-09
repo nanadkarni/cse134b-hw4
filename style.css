@@ -6,6 +6,7 @@
 }
 
 body{
+	color:black;
 	background-color: var(--offwhite);
 	font-family: var(--font-family);
 	font-weight: 300;
@@ -13,6 +14,7 @@ body{
 	max-width: 70rem;
 	margin: 0 auto;
 	margin-bottom: 1rem;
+	line-height: normal;
 }
 
 h1 {
@@ -36,7 +38,7 @@ h2{
 h3{
 	font-family: var(--subheading-font);
 	font-weight: 300;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-style: normal;
 	margin-bottom: 0.5rem;
 	color: var(--offblack);
