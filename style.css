@@ -144,11 +144,12 @@ form-field{
 	display:grid;
 	gap: 0.25rem;
 	grid-template-rows: 1fr;
+	input{
+		width: 40ch;
+	}
 }
 
-input{
-	width: 40ch;
-}
+
 
 textarea{
 	width: 40ch;
