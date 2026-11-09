@@ -32,12 +32,12 @@
                 <h2>Want to work together? Reach out!</h2>
                 <form-field>
                     <label for="name">Name:</label>
-                    <input name = "name" id = "name" type = "text" autocomplete="name"><br>
+                    <input name = "name" id = "name" type = "text" autocomplete="name" minlength="1" maxlength = "100" required><br>
                 </form-field>
 
                 <form-field>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id ="email" autocomplete="email"><br>
+                    <input type="email" name="email" id ="email" autocomplete="email" required><br>
                 </form-field>
 
                 <form-field>
@@ -46,7 +46,7 @@
 
                 <form-field>
                     <label for="comments">What do you want to talk about?</label>
-                    <textarea name ="comments" id="comments"></textarea><br>
+                    <textarea name ="comments" id="comments" minlength="1" maxlength = "1000" required></textarea><br>
                 </form-field>
                 <button type="submit" value="submitted">Submit</button>
             </form>
