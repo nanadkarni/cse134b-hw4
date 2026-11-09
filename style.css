@@ -152,15 +152,16 @@ textarea{
 }
 
 input:required{
-	background-color: var(--paleblue);
+	border: solid 1px black;
 }
 
-input:invalid {
+input:user-invalid, textarea:user-invalid {
   border: 1px dashed var(--darkpeach);
   background-color: var(--palepink);
 }
 
-input:valid {
-  border: 1px solid var(--offblack);
+input:user-valid, textarea:user-valid{
+	border: solid 1px var(--blueish);
 }
+
 
