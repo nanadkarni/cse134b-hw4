@@ -164,4 +164,9 @@ input:user-valid, textarea:user-valid{
 	border: solid 1px var(--blueish);
 }
 
+output{
+	font-size: 0.7em;
+	font-style:italic;
+}
+
 

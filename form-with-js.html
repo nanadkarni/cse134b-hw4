@@ -34,12 +34,14 @@
                 <h2>Want to work together? Reach out!</h2>
                 <form-field>
                     <label for="name">Name:</label>
-                    <input name = "name" id = "name" type = "text" autocomplete="name" minlength="1" maxlength = "100" required><br>
+                    <input name = "name" id = "name" type = "text" autocomplete="name" aria-describedby = "name-error" minlength="1" maxlength = "100" required>
+                    <output id="name-error" for = "name" aria-live="polite"></output>
                 </form-field>
 
                 <form-field>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id ="email" autocomplete="email" required><br>
+                    <input type="email" name="email" aria-describedby = "email-error" id ="email" autocomplete="email" required>
+                    <output id = "email-error" for = "email" aria-live="polite"></output>
                 </form-field>
 
                 <form-field>
@@ -48,7 +50,12 @@
 
                 <form-field>
                     <label for="comments">What do you want to talk about?</label>
-                    <textarea name ="comments" id="comments" minlength="10" maxlength = "1000" required></textarea><br>
+                    <textarea name ="comments" id="comments" minlength="10" maxlength = "500" aria-describedby = "char-count" required></textarea>
+                    <output id="char-count" for="comments" aria-live="polite"></output>
+                </form-field>
+
+                <form-field>
+                    <input type ="hidden" name = "form-errors" value = "[]">
                 </form-field>
                 <button type="submit" value="Validate">Submit</button>
             </form>
