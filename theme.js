@@ -3,11 +3,19 @@ const toggleButton = document.getElementById("toggle-theme");
 function themeToggle() {
     if (document.documentElement.dataset["theme"] === "light") {
         document.documentElement.dataset["theme"] = "spooky";
-        localStorage.setItem("theme", "spooky");
+        try {
+            localStorage.setItem("theme", spooky);
+        } catch (error) {
+            console.warn("The theme preference could not be saved.");
+        }
         return;
     }
     document.documentElement.dataset["theme"] = "light";
-    localStorage.setItem("theme", "light");
+    try {
+        localStorage.setItem("theme", light);
+    } catch (error) {
+        console.warn("The theme preference could not be saved.");
+    }
 }
 
 function showToggle() {

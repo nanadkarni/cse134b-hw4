@@ -4,10 +4,10 @@ const characterLimit = 500;
 let remaining = 500;
 let form_errors=[];
 
-const emailAddress = document.getElementById("email");
-const usersName = document.getElementById("name");
-const comments = document.getElementById("comments");
-const currCharCount = document.getElementById("char-count");
+const emailAddress = document.querySelector("#email");
+const usersName = document.querySelector("#name");
+const currCharCount = document.querySelector("#char-count");
+const comments = document.querySelector("#comments");
 const emailError = document.getElementById('email-error');
 const blankError = document.getElementById('name-error');
 
