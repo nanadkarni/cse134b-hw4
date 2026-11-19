@@ -5,6 +5,11 @@
 	padding: 0;	
 }
 
+[data-theme:"spooky"]{
+	background-color:var(--offblack);
+	color: white;
+}
+
 body{
 	color:black;
 	background-color: var(--offwhite);

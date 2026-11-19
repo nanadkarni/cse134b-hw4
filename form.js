@@ -65,7 +65,6 @@ function countdown(theInput){
     }
 }
 
-
 emailAddress.addEventListener("input", checkEmail);
 usersName.addEventListener("input", charCount);
 comments.addEventListener("input", charCount);
