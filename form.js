@@ -8,19 +8,23 @@ const emailAddress = document.getElementById("email");
 const usersName = document.getElementById("name");
 const comments = document.getElementById("comments");
 const currCharCount = document.getElementById("char-count");
+const emailError = document.getElementById('email-error');
+const blankError = document.getElementById('name-error');
 
+const blankEmailError = "Please fill in an email";
 
 //email check
 function checkEmail(){
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(pattern.test(emailAddress.valueMissing)){
-        emailAddress.setCustomValidity("Please fill in your email ;)");
+        emailAddress.setCustomValidity(blankEmailError);
+        emailError.textContent(blankEmailError);
     }
-    else if (pattern.test(emailAddress.value)){
-        emailAddress.setCustomValidity("");
+    else if (pattern.test(emailAddress.value)==false){
+        emailAddress.setCustomValidity("Please enter a valid email address, with an @ and a valid domain");
     }
     else{
-        emailAddress.setCustomValidity("Please enter a valid email address, with an @ and a valid domain");
+        emailAddress.setCustomValidity("");
     }
 }
 
