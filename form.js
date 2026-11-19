@@ -1,4 +1,5 @@
 //variables
+console.log("form.js connected!");
 const characterLimit = 500;
 let remaining = 500;
 
