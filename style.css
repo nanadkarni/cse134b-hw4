@@ -5,10 +5,21 @@
 	padding: 0;	
 }
 
-[data-theme:"spooky"]{
-	background-color:var(--offblack);
-	color: white;
+[data-theme="spooky"] body {
+	background-color: var(--offblack);
+	color: var(--offwhite);
 }
+[data-theme="spooky"] h1{
+	color: var(--offwhite);
+}
+
+[data-theme="spooky"] button{
+	background-color: var(--offwhite);
+	color:var(--maroon);
+}
+
+
+
 
 body{
 	color:black;
@@ -61,7 +72,7 @@ header{
 	}
 	nav{
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		gap: 1em;
 		padding: 0.5em;
 		text-align: center;
@@ -126,7 +137,7 @@ button:hover{
 
 title-card{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 dialog{

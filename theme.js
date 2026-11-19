@@ -1,7 +1,7 @@
 const toggleButton = document.getElementById("toggle-theme");
 
-function themeToggle(){
-    if (document.documentElement.dataset["theme"] === "light"){
+function themeToggle() {
+    if (document.documentElement.dataset["theme"] === "light") {
         document.documentElement.dataset["theme"] = "spooky";
         localStorage.setItem("theme", "spooky");
         return;
@@ -10,7 +10,7 @@ function themeToggle(){
     localStorage.setItem("theme", "light");
 }
 
-function showToggle(){
+function showToggle() {
     toggleButton.hidden = false;
     let currTheme = localStorage.getItem("theme");
     if (!currTheme) {
@@ -18,5 +18,6 @@ function showToggle(){
     }
     document.documentElement.dataset["theme"] = currTheme;
 }
+
 showToggle();
 toggleButton.addEventListener("click", themeToggle);
