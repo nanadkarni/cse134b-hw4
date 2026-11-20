@@ -4,7 +4,7 @@ function themeToggle() {
     if (document.documentElement.dataset["theme"] === "light") {
         document.documentElement.dataset["theme"] = "spooky";
         try {
-            localStorage.setItem('settings', JSON.stringify({theme: "spooky"}));
+            localStorage.setItem("theme", spooky);
         } catch (error) {
             console.warn("The theme preference could not be saved.");
         }
@@ -12,7 +12,7 @@ function themeToggle() {
     }
     document.documentElement.dataset["theme"] = "light";
     try {
-        localStorage.setItem('settings', JSON.stringify({theme: "light"}));
+        localStorage.setItem("theme", light);
     } catch (error) {
         console.warn("The theme preference could not be saved.");
     }
@@ -20,10 +20,7 @@ function themeToggle() {
 
 function showToggle() {
     toggleButton.hidden = false;
-    let currTheme = localStorage.getItem("theme");
-    if (!currTheme) {
-        currTheme = "light";
-    }
+    let currTheme = localStorage.getItem("theme") || "light";
     document.documentElement.dataset["theme"] = currTheme;
 }
 
