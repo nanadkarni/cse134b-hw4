@@ -9,7 +9,7 @@
 	background-color: var(--offblack);
 	color: var(--offwhite);
 }
-[data-theme="spooky"] h1{
+[data-theme="spooky"] h1, [data-theme="spooky"] h2, [data-theme="spooky"] h3{
 	color: var(--offwhite);
 }
 

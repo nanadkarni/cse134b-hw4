@@ -4,7 +4,7 @@ function themeToggle() {
     if (document.documentElement.dataset["theme"] === "light") {
         document.documentElement.dataset["theme"] = "spooky";
         try {
-            localStorage.setItem("theme", spooky);
+            localStorage.setItem('settings', JSON.stringify({theme: "spooky"}));
         } catch (error) {
             console.warn("The theme preference could not be saved.");
         }
@@ -12,7 +12,7 @@ function themeToggle() {
     }
     document.documentElement.dataset["theme"] = "light";
     try {
-        localStorage.setItem("theme", light);
+        localStorage.setItem('settings', JSON.stringify({theme: "light"}));
     } catch (error) {
         console.warn("The theme preference could not be saved.");
     }
