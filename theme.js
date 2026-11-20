@@ -1,4 +1,5 @@
-const toggleButton = document.getElementById("toggle-theme");
+const toggleButton = document.querySelector("#toggle-theme");
+const aboutPage = document.querySelector("#about");
 
 function themeToggle() {
     if (document.documentElement.dataset["theme"] === "light") {
@@ -24,5 +25,23 @@ function showToggle() {
     document.documentElement.dataset["theme"] = currTheme;
 }
 
+function amazingTransition() {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion) {
+    changePage();
+    return;
+  } else {
+    if (!document.startViewTransition) {
+        changePage();
+      return;
+    }
+    document.startViewTransition(function () {
+      changePage();
+    });
+  }
+}
+
 showToggle();
 toggleButton.addEventListener("click", themeToggle);
+aboutPage.addEventListener("click",amazingTransition);
+
